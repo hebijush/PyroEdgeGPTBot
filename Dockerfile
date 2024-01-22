@@ -22,5 +22,5 @@ ENV API_ID=YOUR_API_ID \
 RUN apk add --no-cache --virtual .build-deps gcc musl-dev libffi-dev git \
     && pip install --no-cache-dir -r requirements.txt \
     && apk del .build-deps
-
+EXPOSE 80
 CMD [ "python", "PyroEdgeGptBot.py" ]
